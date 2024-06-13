@@ -18,7 +18,7 @@
     <button>Search</button>
 </form>
 <br>
-<form action="/gio-hang/add" method="post">
+<form action="/giohang/add" method="post">
     Ma gio hang: <input type="text" name="maGioHang"> <br>
     Ngay tao: <input type="date" name="ngayTao"> <br>
     Ten nguoi nhan: <input type="text" name="tenNguoiNhan"> <br>
@@ -55,7 +55,8 @@
             <td>${x.sdt}</td>
             <td>${x.khachHang.maKH}</td>
             <td>${x.khachHang.tenKH}</td>
-            <td><a href="" type="button" class="btn btn-warning">Update</a></td>
+            <td><a href="/giohang/showupdate?id=${x.id}" type="button" class="btn btn-warning">Update</a></td>
+            <td><a href="/giohang/delete?id=${x.id}" type="button" class="btn btn-danger">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
